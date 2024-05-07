@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    line-height: 1.6;
+}
+h1{
+    text-align: center;
+    margin: 1rem 2rem;
+    font-size: 2rem;
+}
+form{
+   
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+#searh-input{
+    margin-right: .5rem;
+    width: 20rem;
+    padding:.5rem ;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 2px;
+}
+#search-btn{
+    padding: .5rem;
+    background-color: rgb(41, 173, 41);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#search-btn:hover{
+    background-color: rgb(45, 135, 45);
+}
+#search-btn:active{
+    background-color: rgb(13, 239, 13);
+}
+
+.search-results{
+   
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin:0 auto;
+   
+}
+
+.search-result{
+   margin-bottom: 60px;
+   width: 30%;
+   height:100%;
+   border-radius: 5px;
+   box-shadow: 0 0 2px rgba(0,0,0,0.2);
+   overflow: hidden;
+    
+}
+.search-result img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   max-height: 200px;
+   transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+    opacity: .8;
+}
+.search-result a{
+   font-size: 1.1rem;
+   text-decoration: none;
+   color: #333;
+   display: block;
+   padding: .8rem;
+   text-transform: capitalize;
+}
+#show-btn{
+    background-color: #008cba;
+    font-size: 1rem;
+    border: none;
+    padding:.6rem 1rem;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width:768px){
+    .search-results{
+        padding: 1.5rem;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+@media screen and (max-width:480px){
+    .search-result{
+        width: 100%;
+    }
+}
