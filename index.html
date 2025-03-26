@@ -3,21 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image search</title>
+    <title>PixelFinder | Image Search App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Image Search App</h1>
-    <form action="">
-        <input type="text" id="searh-input" placeholder="Search for images">
-        <button id = "search-btn" onclick="searchImg()">Search</button>
-    </form>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-images"></i> PixelFinder</h1>
+            <p class="tagline">Find the perfect image for your project</p>
+        </div>
+    </header>
 
-    <div class="search-results">
-       
-    </div>
-    <button  id="show-btn">Show more</button>
+    <main class="container">
+        <section class="search-section">
+            <form action="" id="search-form">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for images..." required>
+                    <button id="search-btn" type="submit"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="popular-searches">
+                    <span>Popular: </span>
+                    <a href="#" class="tag">Nature</a>
+                    <a href="#" class="tag">Travel</a>
+                    <a href="#" class="tag">Food</a>
+                    <a href="#" class="tag">Technology</a>
+                </div>
+            </form>
+        </section>
 
+        <section class="results-section">
+            <h2 id="results-title">Featured Images</h2>
+            <div class="search-results">
+               <!-- Search results will appear here -->
+            </div>
+            <div class="load-more">
+                <button id="show-btn">Load More <i class="fas fa-arrow-down"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Developed with <i class="fas fa-heart"></i> by Clintstone Ubuan &copy; <span id="current-year"></span></p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- The scroll-to-top button will be added via JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
